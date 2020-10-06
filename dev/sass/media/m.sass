@@ -1,0 +1,68 @@
+$unit: 'px'
+.section
+  +w(100%)
+  padding: 0 10px
+
+.head
+  &-logo,&-cart
+    svg
+      +w(auto)
+      max-height: 70px
+    span
+      display: none
+  &-burger
+    +wh(32px)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: 5px
+    &:before,&:after,span
+      +af
+      +wh(100%,2px)
+      background-color: $dark-gray
+  &-search
+    display: none
+    align-items: center
+    position: relative
+    &-mobile
+      display: flex
+    input
+      +w(100%)
+      background-color: $white
+      border: 1px solid $dark-gray
+      padding: 8px 14px
+    button
+      position: absolute
+      right: 18px
+      padding: 0 10px
+      svg
+        +w(15px)
+  &-top
+    &-line
+      background-image: url('../../img/head-bgc.jpg')
+    &-list
+      max-width: 500px
+      margin: 0 auto
+      display: flex
+      align-items: center
+      padding: 10px 0
+    &-item
+      &:first-child
+        margin-right: auto
+      &:last-child
+        margin-left: 40px
+  &-bottom
+    &-line
+      +w(100%)
+      background-color: $brown
+      position: absolute
+      transition: .2s ease
+      transform: translateX(-100%)
+    &-item
+      padding: 15px 20px
+      border-bottom: 1px solid rgba($dark-gray,.5)
+      &:last-child
+        border-bottom: none
+  &-active
+    .head-bottom-line
+      transform: translateX(0)

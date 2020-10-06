@@ -1,0 +1,45 @@
+$unit: 'px'
+
+.head
+  &-logo,&-logo svg,&-bottom-item a,&-cart,&-cart svg
+    transition: .2s ease
+    &:hover
+      color: $red
+      svg
+        transform: scale(1.15)
+  &-search
+    +w(30%)
+    display: flex
+    margin-right: auto
+    input
+      font-size: 22px
+    button
+      right: 4px
+      svg
+        width: auto
+        transition: .2s ease
+      &:hover
+        svg
+          transform: scale(1.15)
+  &-top
+    &-line
+      padding: 0 130px 0 96px
+    &-list
+      max-width: 100%
+    &-item
+      &:last-child
+        display: none
+  &-bottom
+    &-line
+      transform: translateX(0)
+    &-list
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding: 0 90px
+    &-item
+      font-size: 16px
+      border-bottom: none
+      padding: 15px 0
+      &:first-child
+        display: none

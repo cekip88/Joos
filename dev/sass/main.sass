@@ -1,0 +1,39 @@
+@import "../../../../core/mixins/reset"
+@import "../../../../core/mixins/mixins"
+@import "vars"
+$font_body: 14px
++font_inc($f_reg,'Raleway-Regular.ttf')
++font_inc($f_bold,'Raleway-SemiBold.ttf')
+.set
+	+wh(100%)
+html,body
+	min-height: 100vh
+	overflow-x: hidden
+body
+	+wh(100%)
+header
+	+font($font_body,$f_reg,$black)
+
+input,button
+	font-family: inherit
+	font-size: inherit
+	&:hover
+		cursor: pointer
+
+svg
+	max-width: 100%
+
+input
+	background-color: transparent
+	border: none
+
+$unit: 'px'
+
++mq($mobile#{$unit})
+	@import "media/m"
++mq($tablet#{$unit})
+	@import "media/t"
++mq($desktop#{$unit})
+	@import "media/d"
++mq($desktop-large#{$unit})
+	@import "media/dl"
